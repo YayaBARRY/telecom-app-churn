@@ -1,0 +1,7 @@
+Flask
+joblib
+pandas
+scikit-learn==1.5.2
+gunicorn
+sqlalchemy
+psycopg2-binary
