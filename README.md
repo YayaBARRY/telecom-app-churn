@@ -1,5 +1,5 @@
 
-# Application de Prédiction du Churn – Expresso Sénégal
+# Application de Prédiction de Churn
 Cette application Flask prédit le risque de désabonnement des clients de l'opérateur Expresso Sénégal à partir de données client. Elle est déployée sur Render avec intégration d'une base PostgreSQL pour stocker les prédictions effectuées en empechant les doublons d'enregistrement.
 
 
