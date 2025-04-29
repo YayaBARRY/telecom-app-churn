@@ -7,6 +7,10 @@ from sqlalchemy import create_engine, Column, Integer, String, Float, Boolean, D
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+# Automatisation de la création de la table
+with app.app_context():
+    Base.metadata.create_all(engine)
+
 # Initialisation de Flask
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
