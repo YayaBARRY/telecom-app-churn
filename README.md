@@ -1,6 +1,6 @@
 
 # Application de Prédiction du Churn – Expresso Sénégal
-Cette application Flask prédit le risque de désabonnement des clients de l'opérateur Expresso Sénégal à partir de données client. Elle est déployée sur Render avec intégration d'une base PostgreSQL.
+Cette application Flask prédit le risque de désabonnement des clients de l'opérateur Expresso Sénégal à partir de données client. Elle est déployée sur Render avec intégration d'une base PostgreSQL pour stocker les prédictions effectuées en empechant les doublons d'enregistrement.
 
 
 ## Fonctionnalités
@@ -56,30 +56,6 @@ DATABASE_URL = postgresql://postgres:motdepasse@host:5432/churn_db
 
 ### 2. Déclencher un déploiement automatique via GitHub
 Chaque `git push` déclenchera un nouveau déploiement.
-
-
-## Scripts utiles
-
-### Création manuelle de la table PostgreSQL :
-
-```sql
-CREATE TABLE predictions (
-    id SERIAL PRIMARY KEY,
-    username VARCHAR(100),
-    region INTEGER,
-    montant FLOAT,
-    revenue FLOAT,
-    frequence FLOAT,
-    data_volume FLOAT,
-    on_net FLOAT,
-    orange FLOAT,
-    regularity FLOAT,
-    top_pack FLOAT,
-    freq_top_pack FLOAT,
-    prediction_label BOOLEAN,
-    prediction_score FLOAT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
 
 
 ## Structure des pages
